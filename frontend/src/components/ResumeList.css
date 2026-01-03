@@ -1,0 +1,170 @@
+.resume-list {
+  background: var(--bg-secondary);
+  padding: 25px;
+  border-radius: 16px;
+  box-shadow: var(--shadow-md);
+  border: 1px solid var(--border-color);
+}
+
+.resume-list h2 {
+  margin-top: 0;
+  margin-bottom: 20px;
+  color: var(--text-primary);
+  font-size: 24px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.resume-list h2::before {
+  content: '📋';
+  font-size: 28px;
+}
+
+.empty-message {
+  text-align: center;
+  color: var(--text-muted);
+  padding: 60px 20px;
+  background: var(--bg-primary);
+  border-radius: 12px;
+  border: 2px dashed var(--border-color);
+}
+
+.empty-message::before {
+  content: '📄';
+  display: block;
+  font-size: 48px;
+  margin-bottom: 15px;
+  opacity: 0.5;
+}
+
+.resume-items {
+  display: grid;
+  gap: 15px;
+}
+
+.resume-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  border: 2px solid var(--border-color);
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  background: var(--bg-secondary);
+  position: relative;
+  overflow: hidden;
+}
+
+.resume-item::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 4px;
+  background: var(--primary-gradient);
+  transform: scaleY(0);
+  transition: transform 0.3s ease;
+}
+
+.resume-item:hover::before,
+.resume-item.selected::before {
+  transform: scaleY(1);
+}
+
+.resume-item:hover {
+  border-color: var(--primary-color);
+  background: var(--bg-hover);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+.resume-item.selected {
+  border-color: var(--primary-color);
+  background: var(--bg-hover);
+  box-shadow: var(--shadow-sm);
+}
+
+.resume-info {
+  flex: 1;
+}
+
+.resume-header-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.resume-info h3 {
+  margin: 0;
+  color: var(--text-primary);
+  flex: 1;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.ats-score-badge {
+  background: var(--primary-gradient);
+  color: white;
+  padding: 4px 12px;
+  border-radius: 12px;
+  font-size: 11px;
+  font-weight: 600;
+  margin-left: 10px;
+  box-shadow: var(--shadow-sm);
+}
+
+.resume-email {
+  margin: 0 0 12px 0;
+  color: var(--text-secondary);
+  font-size: 14px;
+}
+
+.resume-skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.skill-badge {
+  padding: 4px 10px;
+  background: var(--bg-primary);
+  border-radius: 12px;
+  font-size: 11px;
+  color: var(--text-secondary);
+  border: 1px solid var(--border-color);
+}
+
+.skill-more {
+  padding: 4px 10px;
+  color: var(--text-muted);
+  font-size: 11px;
+  font-style: italic;
+}
+
+.delete-btn {
+  padding: 8px 16px;
+  background: var(--danger-color);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  margin-left: 15px;
+}
+
+.delete-btn:hover {
+  background: #c82333;
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-sm);
+}
+
+.ats-score-section {
+  margin-top: 25px;
+}

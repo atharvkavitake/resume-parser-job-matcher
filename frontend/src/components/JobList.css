@@ -1,0 +1,169 @@
+.job-list {
+  background: var(--bg-secondary);
+  padding: 25px;
+  border-radius: 16px;
+  box-shadow: var(--shadow-md);
+  border: 1px solid var(--border-color);
+}
+
+.job-list h2 {
+  margin-top: 0;
+  margin-bottom: 20px;
+  color: var(--text-primary);
+  font-size: 24px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.job-list h2::before {
+  content: '🎯';
+  font-size: 28px;
+}
+
+.empty-message {
+  text-align: center;
+  color: var(--text-muted);
+  padding: 60px 20px;
+  background: var(--bg-primary);
+  border-radius: 12px;
+  border: 2px dashed var(--border-color);
+}
+
+.empty-message::before {
+  content: '💼';
+  display: block;
+  font-size: 48px;
+  margin-bottom: 15px;
+  opacity: 0.5;
+}
+
+.job-items {
+  display: grid;
+  gap: 15px;
+}
+
+.job-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  border: 2px solid var(--border-color);
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  background: var(--bg-secondary);
+  position: relative;
+  overflow: hidden;
+}
+
+.job-item::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 4px;
+  background: linear-gradient(135deg, #28a745 0%, #20c997 100%);
+  transform: scaleY(0);
+  transition: transform 0.3s ease;
+}
+
+.job-item:hover::before,
+.job-item.selected::before {
+  transform: scaleY(1);
+}
+
+.job-item:hover {
+  border-color: var(--success-color);
+  background: var(--bg-hover);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+.job-item.selected {
+  border-color: var(--success-color);
+  background: var(--bg-hover);
+  box-shadow: var(--shadow-sm);
+}
+
+.job-info {
+  flex: 1;
+}
+
+.job-info h3 {
+  margin: 0 0 8px 0;
+  color: var(--text-primary);
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.job-company {
+  margin: 0 0 6px 0;
+  color: var(--text-secondary);
+  font-size: 14px;
+}
+
+.job-location {
+  margin: 0 0 12px 0;
+  color: var(--text-muted);
+  font-size: 12px;
+}
+
+.job-skills {
+  margin-top: 12px;
+}
+
+.skills-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  align-items: center;
+}
+
+.skills-group strong {
+  font-size: 11px;
+  color: var(--text-secondary);
+  margin-right: 6px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.skill-badge {
+  padding: 4px 10px;
+  border-radius: 12px;
+  font-size: 11px;
+}
+
+.skill-badge.required {
+  background: rgba(255, 193, 7, 0.1);
+  color: #856404;
+  border: 1px solid rgba(255, 193, 7, 0.3);
+}
+
+.skill-more {
+  padding: 4px 10px;
+  color: var(--text-muted);
+  font-size: 11px;
+  font-style: italic;
+}
+
+.delete-btn {
+  padding: 8px 16px;
+  background: var(--danger-color);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  margin-left: 15px;
+}
+
+.delete-btn:hover {
+  background: #c82333;
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-sm);
+}

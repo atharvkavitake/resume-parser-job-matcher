@@ -1,0 +1,20 @@
+# Flask and web framework
+Flask==3.1.2
+flask-cors==6.0.2
+
+# Database
+pymongo==4.10.1
+
+# File processing
+PyPDF2==3.0.1
+python-docx==1.1.2
+
+# NLP and ML
+spacy==3.8.2
+scikit-learn==1.5.2
+numpy==2.1.1
+
+# Utilities
+python-dotenv==1.0.1
+
+
